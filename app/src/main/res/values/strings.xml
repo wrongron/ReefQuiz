@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Reef Quiz</string>
+    <string name="question1">Question 1: What is the ideal salinity for most reefs?</string>
+    <string name="onezero25">1.025</string>
+    <string name="onezero30">1.030</string>
+    <string name="onezero35">1.035</string>
+    <string name="question2">Question 2: What is the ideal temperature for most reefs?</string>
+    <string name="degrees75">75 Degrees F</string>
+    <string name="degrees80">80 Degrees F</string>
+    <string name="degrees85">85 Degrees F</string>
+    <string name="question3">Question 3: Which of the following fish would be considered reef-safe?</string>
+    <string name="angel">Angel</string>
+    <string name="clown">Clown Fish</string>
+    <string name="trigger">Trigger</string>
+    <string name="question4">Question 4: What is the name of the alga in the following picture?</string>
+    <string name="question5">Question 5: Can you find Nemo?</string>
+    <string name="question6">Question 6: What is your favorite fish?</string>
+</resources>

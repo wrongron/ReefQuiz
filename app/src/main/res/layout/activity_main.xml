@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.android.reefquiz.MainActivity">
+
+        <TextView
+            android:id="@+id/question1"
+            style="@style/QuestionAStyle"
+            android:text="@string/question1" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/RadioStyle"
+            android:layout_gravity="clip_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/onezero25"
+                style="@style/RadioStyle"
+                android:onClick="onSalinityRadioButton"
+                android:text="@string/onezero25" />
+
+            <RadioButton
+                style="@style/RadioStyle"
+                android:id="@+id/onezero30"
+                android:text="@string/onezero30" />
+
+            <RadioButton
+                style="@style/RadioStyle"
+                android:id="@+id/onezero35"
+                android:text="@string/onezero35" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/question2"
+            style="@style/QuestionAStyle"
+            android:text="@string/question2" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/RadioStyle"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/degrees75"
+                android:onClick="onTemperatureButtonClicked"
+                android:text="@string/degrees75" />
+
+            <RadioButton
+                android:id="@+id/degrees80"
+                android:onClick="onTemperatureButtonClicked"
+                android:text="@string/degrees80" />
+
+            <RadioButton
+                android:id="@+id/degrees85"
+                android:onClick="onTemperatureButtonClicked"
+                android:text="@string/degrees85" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/question3"
+            style="@style/QuestionAStyle"
+            android:text="@string/question3" />
+
+        <CheckBox
+            android:id="@+id/angel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onReefSafeCheckboxClicked"
+            android:text="@string/angel" />
+
+        <CheckBox
+            android:id="@+id/clown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onReefSafeCheckboxClicked"
+            android:text="@string/clown" />
+
+        <CheckBox
+            android:id="@+id/trigger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onReefSafeCheckboxClicked"
+            android:text="@string/trigger" />
+
+            <TextView
+                android:id="@+id/question4"
+                style="@style/QuestionAStyle"
+                android:text="@string/question4" />
+
+        <TextView
+            android:id="@+id/question5"
+            style="@style/QuestionAStyle"
+            android:text="@string/question5" />
+
+        <TextView
+            android:id="@+id/question6"
+            style="@style/QuestionAStyle"
+            android:text="@string/question6" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="submitQuiz"
+            android:text="Submit" />
+
+    </LinearLayout>
+</ScrollView>
