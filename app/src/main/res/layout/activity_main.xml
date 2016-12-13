@@ -13,92 +13,132 @@
         android:padding="10dp"
         tools:context="com.example.android.reefquiz.MainActivity">
 
-        <RelativeLayout
-            android:id="@+id/question_1"
-            style="@style/Question">
+        <TextView
+            android:id="@+id/algae"
+            style="@style/Question"
+            android:text="@string/question_1" />
 
-            <TextView
-                android:id="@+id/temperature"
-                style="@style/Question"
-                android:text="@string/question_1" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
             <CheckBox
                 android:id="@+id/answer1_A"
                 style="@style/CheckBox"
-                android:layout_below="@id/temperature"
-                android:text="75F" />
+                android:text="@string/answer1_A" />
 
             <CheckBox
                 android:id="@+id/answer1_B"
                 style="@style/CheckBox"
-                android:layout_below="@+id/temperature"
-                android:layout_toRightOf="@+id/answer1_A"
-                android:text="80F" />
+                android:text="@string/answer1_B" />
 
             <CheckBox
                 android:id="@+id/answer1_C"
                 style="@style/CheckBox"
-                android:layout_below="@+id/temperature"
-                android:layout_toRightOf="@+id/answer1_B"
-                android:text="85F" />
-        </RelativeLayout>
+                android:text="@string/answer1_C" />
 
-        <RadioGroup
-            style="@style/Question">
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/salinity"
-                style="@style/Question"
-                android:layout_below="@+id/answer1_C"
-                android:text="@string/question_2" />
+        <TextView
+            android:id="@+id/coral"
+            style="@style/Question"
+            android:text="@string/question_2" />
 
-            <RadioButton
-                android:id="@+id/answer2_A"
-                style="@style/CheckBox"
-                android:layout_below="@id/salinity"
-                android:text="1.025" />
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
 
-            <RadioButton
-                android:id="@+id/answer2_B"
-                style="@style/CheckBox"
-                android:layout_below="@+id/answer2_A"
-                android:text="1.030" />
+        <CheckBox
+            android:id="@+id/answer2_A"
+            style="@style/CheckBox"
+            android:text="@string/answer2_A" />
 
-            <RadioButton
-                android:id="@+id/answer2_C"
-                style="@style/CheckBox"
-                android:layout_below="@+id/answer2_B"
-                android:text="1.035" />
+        <CheckBox
+            android:id="@+id/answer2_B"
+            style="@style/CheckBox"
+            android:text="@string/answer2_B" />
+
+        <CheckBox
+            android:id="@+id/answer2_C"
+            style="@style/CheckBox"
+            android:text="@string/answer2_C" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/temperature"
+            style="@style/Question"
+            android:text="@string/question_3" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/answer3_A"
+                    style="@style/RadioButton"
+                    android:text="@string/answer3_A" />
+
+                <RadioButton
+                    android:id="@+id/answer3_B"
+                    style="@style/RadioButton"
+                    android:text="@string/answer3_B" />
+
+                <RadioButton
+                    android:id="@+id/answer3_C"
+                    style="@style/RadioButton"
+                    android:text="@string/answer3_C" />
 
             </RadioGroup>
 
         <TextView
-            android:id="@+id/nemo"
+            android:id="@+id/salinity"
             style="@style/Question"
-            android:layout_below="@+id/answer3"
-            android:text="@string/question_3" />
+            android:text="@string/question_4" />
 
-        <EditText
-            android:id="@+id/answer_3"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="scary or funny" />
+            android:orientation="horizontal">
+
+            <RadioGroup style="@style/Question">
+
+                <RadioButton
+                    android:id="@+id/answer4_A"
+                    style="@style/CheckBox"
+                    android:text="@string/answer4_A" />
+
+                <RadioButton
+                    android:id="@+id/answer4_B"
+                    style="@style/CheckBox"
+                    android:text="@string/answer4_B" />
+
+                <RadioButton
+                    android:id="@+id/answer4_C"
+                    style="@style/CheckBox"
+                    android:text="@string/answer4_C" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nemo"
+            style="@style/Question"
+            android:text="@string/question_5" />
+
+        <EditText
+            android:id="@+id/answer_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/answer5_Hint"
+            android:inputType="text" />
 
         <Button
             android:id="@+id/button"
             style="@style/Question"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
             android:onClick="updateScore"
-            android:text="Score Me" />
-
-        <TextView
-            android:id="@+id/current_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="48dp"
-            android:text="0" />
+            android:text="@string/bclick" />
 
     </LinearLayout>
 </ScrollView>

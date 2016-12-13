@@ -10,9 +10,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
+import android.widget.Toast;
 import org.w3c.dom.Text;
-
 import static android.R.attr.name;
 import static android.R.attr.x;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
@@ -105,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void displayScore(int score) {
-        TextView scoreTextView = (TextView) findViewById(R.id.current_score);
-        scoreTextView.setText("" + score);
+        Toast.makeText(getApplicationContext(), "Your score is: " + score, Toast.LENGTH_LONG).show();
     }
 }

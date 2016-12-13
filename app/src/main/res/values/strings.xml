@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">Reef Quiz</string>
-    <string name="question_1">What is the ideal temperature for the common reef aquarium?</string>
-    <string name="question_2">What is the ideal salinity of a reef aquarium?</string>
-    <string name="question_3">What kind of fish was Nemo?</string>
+    <string name="question_1">Which of the following are types of algae?</string>
+    <string name="question_2">Which of the following are characterized as "soft corals"?</string>
+    <string name="question_3">What is the ideal temperature for the common reef aquarium?</string>
+    <string name="question_4">What is the ideal salinity of a reef aquarium?</string>
+    <string name="question_5">What kind of fish is Nemo?</string>
+    <string name="answer1_A">Valonia</string>
+    <string name="answer1_B">Ricordea</string>
+    <string name="answer1_C">Halimeda</string>
+    <string name="answer2_A">Goniopora</string>
+    <string name="answer2_B">Pocilopora</string>
+    <string name="answer2_C">Xenia</string>
+    <string name="answer3_A">75F</string>
+    <string name="answer3_B">80F</string>
+    <string name="answer3_C">85F</string>
+    <string name="answer4_A">1.025</string>
+    <string name="answer4_B">1.030</string>
+    <string name="answer4_C">1.035</string>
+    <string name="answer5_Hint">scary or funny</string>
+    <string name="bclick">Score Me!</string>
 </resources>
