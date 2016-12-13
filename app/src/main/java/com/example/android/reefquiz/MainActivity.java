@@ -16,11 +16,6 @@ import org.w3c.dom.Text;
 import static android.R.attr.name;
 import static android.R.attr.x;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
-import static com.example.android.reefquiz.R.id.answer1_A;
-import static com.example.android.reefquiz.R.id.answer1_B;
-import static com.example.android.reefquiz.R.id.answer1_C;
-import static com.example.android.reefquiz.R.id.answer_3;
-import static com.example.android.reefquiz.R.id.question_1;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,42 +32,73 @@ public class MainActivity extends AppCompatActivity {
         CheckBox answer1A = (CheckBox) findViewById(R.id.answer1_A);
         CheckBox answer1B = (CheckBox) findViewById(R.id.answer1_B);
         CheckBox answer1C = (CheckBox) findViewById(R.id.answer1_C);
+        // Right answer
         if (answer1A.isChecked()) {
-            score--;
-        }
-        if (answer1B.isChecked()) {
             score++;
         }
-        if (answer1C.isChecked()) {
+        // Wrong answer
+        if (answer1B.isChecked()) {
             score--;
+        }
+        // Right answer
+        if (answer1C.isChecked()) {
+            score++;
         }
 
         // Question 2
-        RadioButton answer2A = (RadioButton) findViewById(R.id.answer2_A);
-        RadioButton answer2B = (RadioButton) findViewById(R.id.answer2_B);
-        RadioButton answer2C = (RadioButton) findViewById(R.id.answer2_C);
+        CheckBox answer2A = (CheckBox) findViewById(R.id.answer2_A);
+        CheckBox answer2B = (CheckBox) findViewById(R.id.answer2_B);
+        CheckBox answer2C = (CheckBox) findViewById(R.id.answer2_C);
+        // Wrong answer
         if (answer2A.isChecked()) {
+            score--;
+        }
+        // Wrong answer
+        if (answer2B.isChecked()) {
+            score--;
+        }
+        // Right answer
+        if (answer2C.isChecked()) {
             score++;
         }
 
         // Question 3
-        EditText answer3 = (EditText) findViewById(R.id.answer_3);
-        if (answer3.getText().toString().equals("Clown")) {
+        RadioButton answer3A = (RadioButton) findViewById(R.id.answer3_A);
+        RadioButton answer3B = (RadioButton) findViewById(R.id.answer3_B);
+        RadioButton answer3C = (RadioButton) findViewById(R.id.answer3_C);
+        // Right answer
+        if (answer3B.isChecked()) {
             score++;
         }
-        if (answer3.getText().toString().equals("clown")) {
+
+        // Question 4
+        RadioButton answer4A = (RadioButton) findViewById(R.id.answer4_A);
+        RadioButton answer4B = (RadioButton) findViewById(R.id.answer4_B);
+        RadioButton answer4C = (RadioButton) findViewById(R.id.answer4_C);
+        // Right answer
+        if (answer4A.isChecked()) {
             score++;
         }
-        if (answer3.getText().toString().equals("Clown fish")) {
+
+        // Question 5
+        EditText answer5 = (EditText) findViewById(R.id.answer_5);
+        // Right answer is any that includes the word "clown" or "clownfish"
+        if (answer5.getText().toString().equals("Clown")) {
             score++;
         }
-        if (answer3.getText().toString().equals("Clownfish")) {
+        if (answer5.getText().toString().equals("clown")) {
             score++;
         }
-        if (answer3.getText().toString().equals("clown fish")) {
+        if (answer5.getText().toString().equals("Clown fish")) {
             score++;
         }
-        if (answer3.getText().toString().equals("clownfish")) {
+        if (answer5.getText().toString().equals("Clownfish")) {
+            score++;
+        }
+        if (answer5.getText().toString().equals("clown fish")) {
+            score++;
+        }
+        if (answer5.getText().toString().equals("clownfish")) {
             score++;
         }
         displayScore(score);
