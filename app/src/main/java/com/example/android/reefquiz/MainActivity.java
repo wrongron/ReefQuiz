@@ -11,7 +11,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import org.w3c.dom.Text;
+
 import static android.R.attr.name;
 import static android.R.attr.x;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
@@ -24,23 +26,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void updateScore(View view){
+    public void updateScore(View view) {
         int score = 0;
 
         // Question 1
         CheckBox answer1A = (CheckBox) findViewById(R.id.answer1_A);
         CheckBox answer1B = (CheckBox) findViewById(R.id.answer1_B);
         CheckBox answer1C = (CheckBox) findViewById(R.id.answer1_C);
-        // Right answer
-        if (answer1A.isChecked()) {
-            score++;
-        }
-        // Wrong answer
-        if (answer1B.isChecked()) {
-            score--;
-        }
-        // Right answer
-        if (answer1C.isChecked()) {
+        // Score a point only when two correct are answered
+        if (answer1A.isChecked() && answer1C.isChecked() && !answer1B.isChecked()) {
             score++;
         }
 
@@ -62,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Question 3
-        RadioButton answer3A = (RadioButton) findViewById(R.id.answer3_A);
         RadioButton answer3B = (RadioButton) findViewById(R.id.answer3_B);
-        RadioButton answer3C = (RadioButton) findViewById(R.id.answer3_C);
         // Right answer
         if (answer3B.isChecked()) {
             score++;
@@ -72,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Question 4
         RadioButton answer4A = (RadioButton) findViewById(R.id.answer4_A);
-        RadioButton answer4B = (RadioButton) findViewById(R.id.answer4_B);
-        RadioButton answer4C = (RadioButton) findViewById(R.id.answer4_C);
         // Right answer
         if (answer4A.isChecked()) {
             score++;
@@ -81,29 +71,25 @@ public class MainActivity extends AppCompatActivity {
 
         // Question 5
         EditText answer5 = (EditText) findViewById(R.id.answer_5);
-        // Right answer is any that includes the word "clown" or "clownfish"
-        if (answer5.getText().toString().equals("Clown")) {
+        // Right answer is any that includes the word "clown", "clownfish" or "clown fish", with any case
+        if (answer5.getText().toString().equalsIgnoreCase("clown")) {
             score++;
         }
-        if (answer5.getText().toString().equals("clown")) {
+        if (answer5.getText().toString().equalsIgnoreCase("clown fish")) {
             score++;
         }
-        if (answer5.getText().toString().equals("Clown fish")) {
-            score++;
-        }
-        if (answer5.getText().toString().equals("Clownfish")) {
-            score++;
-        }
-        if (answer5.getText().toString().equals("clown fish")) {
-            score++;
-        }
-        if (answer5.getText().toString().equals("clownfish")) {
+        if (answer5.getText().toString().equalsIgnoreCase("clownfish")) {
             score++;
         }
         displayScore(score);
     }
 
     public void displayScore(int score) {
-        Toast.makeText(getApplicationContext(), "Your score is: " + score, Toast.LENGTH_LONG).show();
+        if (score == 5) {
+            Toast.makeText(getApplicationContext(), "You aced it - your score is: " + score, Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Not quite - your score is: " + score, Toast.LENGTH_LONG).show();
+        }
     }
 }
