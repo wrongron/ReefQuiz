@@ -42,16 +42,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox answer2A = (CheckBox) findViewById(R.id.answer2_A);
         CheckBox answer2B = (CheckBox) findViewById(R.id.answer2_B);
         CheckBox answer2C = (CheckBox) findViewById(R.id.answer2_C);
-        // Wrong answer
-        if (answer2A.isChecked()) {
-            score--;
-        }
-        // Wrong answer
-        if (answer2B.isChecked()) {
-            score--;
-        }
-        // Right answer
-        if (answer2C.isChecked()) {
+        // Score a point only when C is chosen
+        if (answer2C.isChecked() && !answer2A.isChecked() && !answer2B.isChecked()) {
             score++;
         }
 
